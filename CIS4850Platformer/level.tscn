@@ -1,0 +1,86 @@
+[gd_scene load_steps=2 format=3 uid="uid://i8hfwcr7j03c"]
+
+[ext_resource type="PackedScene" uid="uid://0lfuwrlux3jq" path="res://player.tscn" id="1_lbonv"]
+
+[node name="Level" type="Node2D"]
+
+[node name="Platforms" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Platforms"]
+position = Vector2(3, 428)
+scale = Vector2(0.816, 0.564)
+
+[node name="Line2D" type="Line2D" parent="Platforms/StaticBody2D"]
+points = PackedVector2Array(251, 216, 437, 217, 495, 291, 454, 353, 253, 355, 180, 293, 255, 209)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Platforms/StaticBody2D"]
+position = Vector2(0.0282456, -0.30638)
+polygon = PackedVector2Array(251, 216, 437, 217, 495, 291, 454, 353, 253, 355, 180, 293, 255, 209)
+one_way_collision = true
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Platforms"]
+position = Vector2(321, 272)
+scale = Vector2(0.816, 0.564)
+
+[node name="Line2D" type="Line2D" parent="Platforms/StaticBody2D2"]
+points = PackedVector2Array(251, 216, 437, 217, 495, 291, 454, 353, 253, 355, 180, 293, 255, 209)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Platforms/StaticBody2D2"]
+position = Vector2(0.0282456, -0.30638)
+polygon = PackedVector2Array(251, 216, 437, 217, 495, 291, 454, 353, 253, 355, 180, 293, 255, 209)
+one_way_collision = true
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Platforms"]
+position = Vector2(537, 116)
+scale = Vector2(0.816, 0.564)
+
+[node name="Line2D" type="Line2D" parent="Platforms/StaticBody2D3"]
+points = PackedVector2Array(251, 216, 437, 217, 495, 291, 454, 353, 253, 355, 180, 293, 255, 209)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Platforms/StaticBody2D3"]
+position = Vector2(0.0282456, -0.30638)
+polygon = PackedVector2Array(251, 216, 437, 217, 495, 291, 454, 353, 253, 355, 180, 293, 255, 209)
+one_way_collision = true
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Platforms"]
+position = Vector2(798, -28)
+scale = Vector2(0.816, 0.564)
+
+[node name="Line2D" type="Line2D" parent="Platforms/StaticBody2D4"]
+points = PackedVector2Array(251, 216, 437, 217, 495, 291, 454, 353, 253, 355, 180, 293, 255, 209)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Platforms/StaticBody2D4"]
+position = Vector2(0.0282456, -0.30638)
+polygon = PackedVector2Array(251, 216, 437, 217, 495, 291, 454, 353, 253, 355, 180, 293, 255, 209)
+one_way_collision = true
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Platforms"]
+position = Vector2(520, -141)
+scale = Vector2(0.816, 0.564)
+
+[node name="Line2D" type="Line2D" parent="Platforms/StaticBody2D5"]
+points = PackedVector2Array(251, 216, 437, 217, 495, 291, 454, 353, 253, 355, 180, 293, 255, 209)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Platforms/StaticBody2D5"]
+position = Vector2(0.0282456, -0.30638)
+polygon = PackedVector2Array(251, 216, 437, 217, 495, 291, 454, 353, 253, 355, 180, 293, 255, 209)
+one_way_collision = true
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Platforms"]
+position = Vector2(236, -239)
+scale = Vector2(0.816, 0.564)
+
+[node name="Line2D" type="Line2D" parent="Platforms/StaticBody2D6"]
+points = PackedVector2Array(251, 216, 437, 217, 495, 291, 454, 353, 253, 355, 180, 293, 255, 209)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Platforms/StaticBody2D6"]
+position = Vector2(0.0282456, -0.30638)
+polygon = PackedVector2Array(251, 216, 437, 217, 495, 291, 454, 353, 253, 355, 180, 293, 255, 209)
+one_way_collision = true
+
+[node name="Player" parent="." instance=ExtResource("1_lbonv")]
+position = Vector2(288, 499)
+scale = Vector2(0.7, 0.7)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(0.8, 0.8)
