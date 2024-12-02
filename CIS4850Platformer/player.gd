@@ -2,10 +2,10 @@ extends CharacterBody2D
 
 
 const SPEED = 100.0
-const JUMP_VELOCITY = -200.0
+const JUMP_VELOCITY = -130.0
 
 @onready var animated_sprite : AnimatedSprite2D = $AnimatedSprite2D
-
+@onready var jumpSound: AudioStreamPlayer2D = $jumpSound
 var animation_locked : bool = false
 var direction : Vector2 = Vector2.ZERO
 var was_in_air : bool = false
@@ -55,5 +55,7 @@ func update_facing_direction():
 		
 func jump():
 	velocity.y = JUMP_VELOCITY
+	if jumpSound:
+		jumpSound.play() 
 	animated_sprite.play("jump")
 	animation_locked = true
